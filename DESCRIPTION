@@ -1,0 +1,18 @@
+Package: noaaclimate
+Title: Routines for fetching NOAA (PSL and CPC) climate data
+Version: 0.1.0
+Authors@R: 
+    person(given = "Luis Leopoldo",
+           family = "Perez",
+           role = c("aut", "cre"),
+           email = "lperezp@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Set of routines for fetching monthly NOAA-PSL and weekly NOAA-CPC climate time series data. 
+License: Apache License (>= 2)
+Imports:
+	zoo,
+	xts
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

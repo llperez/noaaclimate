@@ -1,0 +1,15 @@
+
+#' @export
+psl_index_names <- function() .psl_names
+
+#' @export
+psl_monthly <- function(index_names, output_type=c("data.frame", "ts", "xts")) {
+    output_type <- match.arg(output_type)
+    stopifnot(all(index_names %in% .psl_names))
+
+    mfunc <- .psl_monthly_func[[output_type]]
+    x <- lapply(index_names, function(w) mfunc(.get_raw_psl(paste("https://psl.noaa.gov/data/correlation/", w, ".data", sep="")), w))
+    x <- Reduce(.psl_monthly_merge_func[[output_type]], x)
+
+    .psl_monthly_post_func[[output_type]](x, index_names)
+}
