@@ -5,8 +5,7 @@ Authors@R:
     person(given = "Luis Leopoldo",
            family = "Perez",
            role = c("aut", "cre"),
-           email = "lperezp@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "lperezp@gmail.com")
 Description: Set of routines for fetching monthly NOAA-PSL and weekly NOAA-CPC climate time series data. 
 License: Apache License (>= 2)
 Imports:
